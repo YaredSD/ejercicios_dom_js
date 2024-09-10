@@ -1,7 +1,7 @@
 // 2.1 Inserta dinamicamente en un html un div vacio con javascript.
-
+let NuevoDiv = document.createElement("div1");
 // 2.2 Inserta dinamicamente en un html un div que contenga una p con javascript.
-
+let NuevoDivP = document.createElement
 // 2.3 Inserta dinamicamente en un html un div que contenga 6 p utilizando un loop con javascript.
 
 // 2.4 Inserta dinamicamente con javascript en un html una p con el texto 'Soy dinámico!'.
