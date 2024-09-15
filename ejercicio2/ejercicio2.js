@@ -1,18 +1,45 @@
-// 2.1 Inserta dinamicamente en un html un div vacio con javascript.
-let NuevoDiv = document.createElement("div1");
-// 2.2 Inserta dinamicamente en un html un div que contenga una p con javascript.
-let NuevoDivP = document.createElement
-// 2.3 Inserta dinamicamente en un html un div que contenga 6 p utilizando un loop con javascript.
-
-// 2.4 Inserta dinamicamente con javascript en un html una p con el texto 'Soy dinámico!'.
-
-// 2.5 Inserta en el h2 con la clase .fn-insert-here el texto 'Wubba Lubba dub dub'.
-
-// 2.6 Basandote en el siguiente array crea una lista ul > li con los textos del array.
+// 2.1
+const NuevoDiv = document.createElement("div");
+document.body.appendChild(NuevoDiv);
+// 2.2
+const NuevoDivP = document.createElement("div");
+const p = document.createElement("p");
+NuevoDivP.appendChild(p);
+document.body.appendChild(NuevoDivP);
+// 2.3
+const NuevoDiv6P = document.createElement("div");
+for (let i = 0; i < 5; i++) {
+    const NuevoP = document.createElement("p");
+    NuevoDiv6P.appendChild(NuevoP);
+}
+document.body.appendChild(NuevoDiv6P);
+// 2.4
+const pDinamica = document.createElement("p");
+pDinamica.textContent = "Soy dinámico!";
+document.body.appendChild(pDinamica);
+// 2.5
+const h2Wubba = document.querySelector("h2.fn-insert-here");
+h2Wubba.innerHTML = "Wubba Lubba dub dub";
+// 2.6
 const apps = ['Facebook', 'Netflix', 'Instagram', 'Snapchat', 'Twitter'];
-
-// 2.7 Elimina todos los nodos que tengan la clase .fn-remove-me
-
+const lista = document.createElement("ul");
+for (const app of apps) {
+    const SingleApp = document.createElement("li");
+    SingleApp.textContent = app;
+    lista.appendChild(SingleApp);
+}
+document.body.appendChild(lista);
+// 2.7
+const Eliminame = document.querySelectorAll(".fn-remove-me");
+for (const nodo of Eliminame) {
+    nodo.remove();
+}
 // 2.8 Inserta una p con el texto 'Voy en medio!' entre los dos div. Recuerda que no solo puedes insertar elementos con .appendChild.
 
-// 2.9 Inserta p con el texto 'Voy dentro!', dentro de todos los div con la clase .fn-insert-here
+// 2.9
+const Inserta = document.querySelectorAll("div.fn-insert-here");
+for (i = 0; i < Inserta.length; i++){
+    const OtroNuevoP = document.createElement("p");
+    OtroNuevoP.textContent = "Voy dentro!";
+    Inserta[i].append(OtroNuevoP);
+}
