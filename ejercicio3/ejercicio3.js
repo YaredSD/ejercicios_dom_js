@@ -1,12 +1,28 @@
-// 1.1 Basandote en el array siguiente, crea una lista ul > li dinámicamente en el html que imprima cada uno de los paises.
+// 3.1
 const countries = ['Japón', 'Nicaragua', 'Suiza', 'Australia', 'Venezuela'];
-
-// 1.2 Elimina el elemento que tenga la clase .fn-remove-me.
-
-// 1.3 Utiliza el array para crear dinamicamente una lista ul > li de elementos en el div de html con el atributo data-function="printHere".
+const ListaPaises = document.createElement("ul");
+for (const country of countries) {
+	const Pais = document.createElement("li");
+	Pais.textContent = country;
+	ListaPaises.appendChild(Pais);
+}
+document.body.appendChild(ListaPaises);
+// 3.2
+const Eliminado = document.querySelectorAll(".fn-remove-me");
+for (const texto of Eliminado) {
+	texto.remove();
+}
+// 3.3
 const cars = ['Mazda 6', 'Ford fiesta', 'Audi A4', 'Toyota corola'];
-
-//1.4 Crea dinamicamente en el html una serie de divs que contenga un elemento h4 para el titulo y otro elemento img para la imagen.
+const ListaCoches = document.createElement("ul");
+for (const car of cars) {
+	const Coche = document.createElement("li");
+	Coche.textContent = car;
+	ListaCoches.appendChild(Coche);
+}
+ListaCoches.classList.add('[data-function="printHere"');
+document.body.appendChild(ListaCoches);
+// 3.4 Crea dinamicamente en el html una serie de divs que contenga un elemento h4 para el titulo y otro elemento img para la imagen.
 const countriess = [
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1'}, 
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2'},
@@ -15,7 +31,6 @@ const countriess = [
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
 ];
 
+// 3.5 Basandote en el ejercicio anterior. Crea un botón que elimine el último elemento de la serie de divs.
 
-// 1.5 Basandote en el ejercicio anterior. Crea un botón que elimine el último elemento de la serie de divs.
-
-// 1.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los divs que elimine ese mismo elemento del html.
+// 3.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los divs que elimine ese mismo elemento del html.

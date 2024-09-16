@@ -34,10 +34,11 @@ const Eliminame = document.querySelectorAll(".fn-remove-me");
 for (const nodo of Eliminame) {
     nodo.remove();
 }
-// 2.8 Inserta una p con el texto 'Voy en medio!' entre los dos div. Recuerda que no solo puedes insertar elementos con .appendChild.
-
-// 2.9
+// 2.8
+let OtroNuevoP = document.createTextNode("Voy en medio!");
 const Inserta = document.querySelectorAll("div.fn-insert-here");
+Inserta[0].insertAdjacentHTML("afterend", "<p>" + OtroNuevoP.data + "</p>");
+// 2.9
 for (i = 0; i < Inserta.length; i++){
     const OtroNuevoP = document.createElement("p");
     OtroNuevoP.textContent = "Voy dentro!";
