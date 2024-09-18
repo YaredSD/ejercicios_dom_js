@@ -22,7 +22,7 @@ for (const car of cars) {
 }
 ListaCoches.classList.add('[data-function="printHere"');
 document.body.appendChild(ListaCoches);
-// 3.4 Crea dinamicamente en el html una serie de divs que contenga un elemento h4 para el titulo y otro elemento img para la imagen.
+// 3.4
 const countriess = [
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=1'}, 
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=2'},
@@ -30,7 +30,27 @@ const countriess = [
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=4'},
 	{title: 'Random title', imgUrl: 'https://picsum.photos/300/200?random=5'}
 ];
+const Paises = document.querySelector("body");
+for (const country of countriess) {
+	const titulo = document.createElement("h4");
+	const imagen = document.createElement("img");
+	const div = document.createElement("div");
 
-// 3.5 Basandote en el ejercicio anterior. Crea un botón que elimine el último elemento de la serie de divs.
+	titulo.textContent = country.title;
+	imagen.src = country.imgUrl;
+	div.appendChild(titulo);
+	div.appendChild(imagen);
+
+	Paises.appendChild(div);
+}
+// 3.5
+const boton = document.createElement("button");
+boton.textContent = "Elimina el último elemento"
+boton.addEventListener("click", () => {
+	const Paises2 = document.querySelectorAll("body > div");
+	const UltimoElemento = Paises2[Paises2.length-1];
+	UltimoElemento.remove();
+})
+document.body.appendChild(boton);
 
 // 3.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los divs que elimine ese mismo elemento del html.

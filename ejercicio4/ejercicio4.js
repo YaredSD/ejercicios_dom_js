@@ -1,5 +1,21 @@
-// 1.1 Añade un botón a tu html con el id btnToClick y en tu javascript añade el evento click que ejecute un console log con la información del evento del click
-
-// 1.2 Añade un evento 'focus' que ejecute un console.log con el valor del input.
-
-// 1.3 Añade un evento 'input' que ejecute un console.log con el valor del input.
+// 4.1
+const boton = document.createElement('button');
+boton.textContent = "Ejecuta la información"
+boton.id = "btnToClick";
+boton.addEventListener("click", (event) => {
+    console.log(event);
+})
+document.body.appendChild(boton);
+// 4.2
+const input = document.querySelectorAll("input");
+for (const inputs of input) {
+    inputs.addEventListener("focus", () => {
+        console.log(input.value);
+    } )
+}
+// 4.3
+input.forEach((input) => {
+    input.addEventListener("input", () => {
+        console.log(input.value);
+    })
+})
