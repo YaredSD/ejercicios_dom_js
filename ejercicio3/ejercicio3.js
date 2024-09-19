@@ -53,4 +53,13 @@ boton.addEventListener("click", () => {
 })
 document.body.appendChild(boton);
 
-// 3.6 Basandote en el ejercicio anterior. Crea un botón para cada uno de los divs que elimine ese mismo elemento del html.
+// 3.6
+const EliminaDiv = document.querySelector(".list");
+const Adios = document.querySelector("Elimina.div.img:last-child");
+const boton2 = document.createElement("button");
+boton2.textContent = "Elimina este elemento";
+boton2.addEventListener("click", () => {
+	EliminaDiv.removeChild(Adios);
+})
+document.body.append(boton2);
+// Este ejercicio lo he intentado de mil formas distintas y no consigo hacerlo. Tal disgusto encima que se queda como está
